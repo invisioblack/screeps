@@ -215,21 +215,7 @@ Creep.prototype.moveByPathMy = function(route, routePos, start, target, skipPreM
         let callbackInner = function(roomName) {
           let costMatrix = PathFinder.CostMatrix.deserialize(room.memory.costMatrix.base);
 
-          // TODO excluding structures, for the case where the spawn is in the wrong spot (I guess this can be handled better)
-          let structures = room.find(FIND_STRUCTURES, {
-            filter: function(object) {
-              if (object.structureType == STRUCTURE_RAMPART) {
-                return false;
-              }
-              if (object.structureType == STRUCTURE_ROAD) {
-                return false;
-              }
-              if (object.structureType == STRUCTURE_CONTAINER) {
-                return false;
-              }
-              return true;
-            }
-          });
+          let structures = room.findBlockingStructures();
           for (let structure of structures) {
             costMatrix.set(structure.pos.x, structure.pos.y, config.layout.structureAvoid);
           }
