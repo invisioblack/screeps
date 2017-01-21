@@ -269,6 +269,7 @@ Room.prototype.buildPath = function(route, routePos, from, to) {
 // Providing the targetId is a bit odd
 Room.prototype.getPath = function(route, routePos, startId, targetId, fixed) {
   if (!this.memory.position) {
+    this.log('getPath no position');
     this.updatePosition();
   }
 

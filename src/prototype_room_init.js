@@ -165,6 +165,7 @@ let buildCostMatrix = function(room) {
   room.memory.costMatrix = {};
 
   // TODO adapt updatePosition => init Position and set the costmatrix
+  room.log('buildCostMatrix');
   let costMatrixBase = room.updatePosition();
 
   for (let id in room.memory.position.creep) {
