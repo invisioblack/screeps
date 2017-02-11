@@ -1,4 +1,4 @@
-# screeps-bot-tooangel
+# TooAngel Artificial intelligence for screeps
 
 [![CircleCI](https://circleci.com/gh/TooAngel/screeps.svg?style=svg)](https://circleci.com/gh/TooAngel/screeps)
 [![Code Climate](https://codeclimate.com/github/Somotaw/screeps/badges/gpa.svg)](https://codeclimate.com/github/Somotaw/screeps)
